@@ -62,10 +62,6 @@ class ContactUsController extends Controller
             'instagram_link' => 'required|url',
             'address_en' => 'required',
             'address_ar' => 'required',
-            'address_fr' => 'required',
-            'address_tr' => 'required',
-            'address_zh' => 'required',
-            'address_de' => 'required',
             'map_link' => 'required',
         ]);
         if ($validator->fails()) {

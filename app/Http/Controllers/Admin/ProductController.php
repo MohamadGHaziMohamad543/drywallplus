@@ -128,7 +128,7 @@ class ProductController extends Controller
             'description_ar' => 'required|string',
             'description_en' => 'required|string',
             'sub_sub_category_id' => 'required|exists:sub_sub_categories,id',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp',
             'catalog' => 'nullable|file|mimes:pdf,doc,docx',
         ]);
 

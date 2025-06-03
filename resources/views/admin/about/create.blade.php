@@ -196,6 +196,7 @@
         galleryFileInput.files = files; // This line ensures the dropped files are set
     }
 </script>
-<script src="{{asset('admin/assets/js/editor.init.js')}}"></script>
-<script src="{{asset('admin/assets/js/tinymce/tinymce.min.js')}}"></script>
+
+<script src="{{asset('assets/js/editor.init.js')}}"></script>
+<script src="{{asset('assets/js/tinymce/tinymce.min.js')}}"></script>
 @endsection

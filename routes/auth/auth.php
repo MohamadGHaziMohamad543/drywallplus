@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,8 @@ Route::group([
 ], function () {
     Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login.page');
     Route::post('/login', [AuthController::class, 'login'])->name('login');
+    Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('en/login');
+})->name('logout');
 });

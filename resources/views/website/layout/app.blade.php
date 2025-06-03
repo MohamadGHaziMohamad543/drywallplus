@@ -59,9 +59,10 @@
 						<nav id="nav" style="padding:0;width:100%;padding-top:20px;">
 							<ul class="list-unstyled" style="display:flex;justify-content:space-between;padding:0;width:100%;">
 								<li><a href="{{ route('home.page', app()->getLocale()) }}">{{ __('messages.home') }}</a></li>
-								<li><a href="{{ route('category.page', app()->getLocale()) }}">{{ __('messages.ceiling_systems') }}</a></li>
-								<li><a href="{{ route('category.page', app()->getLocale()) }}">{{ __('messages.gypsum_wall_systems') }}</a></li>
-								<li><a href="{{ route('category.page', app()->getLocale()) }}">{{ __('messages.design_studio') }}</a></li>
+								@foreach ($global_categories as $category)
+								<li><a href="{{ route('category.page', app()->getLocale()) }}">{{ $category->name_en }}</a></li>
+								@endforeach
+								
 								<li><a href="{{ route('category.page', app()->getLocale()) }}">{{ __('messages.faq_section') }}</a></li>
 								<li><a href="{{ route('catalog.page', app()->getLocale()) }}">{{ __('messages.catalog') }}</a></li>
 								<li><a href="{{ route('faq.page', app()->getLocale()) }}">{{ __('messages.faq') }}</a></li>

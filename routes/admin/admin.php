@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\SubSubCategoryController;
 use App\Http\Controllers\Admin\ContactUsController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\SliderController;
 Route::group([
         'prefix' => '{lang}/admin',
     'where' => ['lang' => 'en|ar'],
@@ -21,4 +22,5 @@ Route::resource('/subcategories', SubCategoryController::class);
 Route::resource('contact-us', ContactUsController::class);
 Route::resource('abouts', AboutController::class);
 
+    Route::resource('sliders', SliderController::class);
 });
